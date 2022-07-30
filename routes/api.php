@@ -30,7 +30,7 @@ $router->group(['prefix'=>'department'], function () use ($router){
 $router->group(['prefix'=>'jabatan'], function () use ($router){
     $router->get('list', 'JabatanController@index');
     $router->get('{id}', 'JabatanController@show');
-    $router->post('{id}', 'JabatanController@store');
+    $router->post('create', 'JabatanController@store');
     $router->put('{id}', 'JabatanController@update');
     $router->delete('{id}', 'JabatanController@destroy');
 });
@@ -38,7 +38,7 @@ $router->group(['prefix'=>'jabatan'], function () use ($router){
 $router->group(['prefix'=>'level'], function () use ($router){
     $router->get('list', 'LevelController@index');
     $router->get('{id}', 'LevelController@show');
-    $router->post('{id}', 'LevelController@store');
+    $router->post('create', 'LevelController@store');
     $router->put('{id}', 'LevelController@update');
     $router->delete('{id}', 'LevelController@destroy');
 });
@@ -46,7 +46,7 @@ $router->group(['prefix'=>'level'], function () use ($router){
 $router->group(['prefix'=>'karyawan'], function () use ($router){
     $router->get('list', 'KaryawanController@index');
     $router->get('{id}', 'KaryawanController@show');
-    $router->post('{id}', 'KaryawanController@store');
+    $router->post('create', 'KaryawanController@store');
     $router->put('{id}', 'KaryawanController@update');
     $router->delete('{id}', 'KaryawanController@destroy');
 });
